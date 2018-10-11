@@ -1,10 +1,8 @@
-title: Modernist theme
-description: Modernist is a theme for GitHub Pages.
+# Site settings
+title: ownCloud Quickstart
+description: Quickstart for Installing and Configuring ownCloud
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-modernist
-
-# Site settings
-description: Quickstart for Installing and Configuring ownCloud"
 baseurl: "/owncloud-quickstart/"
-url: "http://schwingle.github.io"
+url: "http://schwingle.github.io/"
