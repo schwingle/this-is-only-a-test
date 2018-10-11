@@ -2,29 +2,18 @@
 layout: default
 ---
 
-# Admin: Install the ownCloud server
+# Admin: Install the ownCloud Server
 
-ownCloud server runs on Linux. On a Linux distribution, you can use a package manager to install the server (https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html). The recommended package to use is owncloud-files. It only installs ownCloud, and does not install Apache, a database, or any of the required PHP dependencies. Package managers should only be used for single-server setups. For production environments, we recommend installing from the tar archive.
+## Install with a Package Manager
+ownCloud server runs on Linux. On a Linux distribution, you can use a package manager to install the server (https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html). The recommended package to use is owncloud-files. It only installs ownCloud, and does not install Apache, a database, or any of the required PHP dependencies. Package managers should only be used for single-server setups.
 
-If there are no packages for your Linux distribution, or you prefer installing from the source tarball, you can set up ownCloud from scratch using a classic LAMP stack (Linux, Apache, MySQL/MariaDB, PHP). 
-
-Installing ownCloud from Open Build Service packages is the preferred method. These are maintained by ownCloud engineers, and you can use your package manager to keep your ownCloud server up-to-date. https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html. 
-
-https://download.owncloud.org/download/repositories/stable/owncloud/index.html
-
-
-## Prerequisites¶
+### Prerequisites for a Package Manager Installation
 
 If you are using a Linux distribution, it should have packages for all the required extensions. You can check the presence of a module by typing 
 
             php -m | grep -i <module_name>
             
 If you get a result, the module is present.
-
-The ownCloud tar archive contains all of the required third-party PHP libraries. As a result, no extra ones are, strictly, necessary. However, ownCloud does require that PHP has a set of extensions installed, enabled, and configured.
-
-https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#prerequisites-label lists both the required and optional PHP extensions. If you need further information about a particular extension, please consult the relevant section of the extensions section of the PHP manual.
-
 
 ### Update Package Manager
 
@@ -36,8 +25,38 @@ Once your package manager has been updated, follow the rest of the instructions 
 
 https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#installation-wizard-label
 
+### Run the Installation Wizard
 
-## Install ownCloud from the Command Line
+If you prefer to install ownCloud using a GUI, follow these instructions.
+
+When the ownCloud prerequisites are fulfilled and all ownCloud files are installed, the last step to completing the installation is running the Installation Wizard. This involves just three steps:
+
+   1. Point your web browser to http://localhost/owncloud
+   2. Enter your desired administrator’s username and password.
+   3. Click “Finish Setup”.
+
+  You’re now finished and can start using your new ownCloud server.
+
+https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html
+
+
+
+## Install from the Source Tarball
+If there are no packages for your Linux distribution, or you prefer installing from the source tarball, you can set up ownCloud from scratch using a classic LAMP stack (Linux, Apache, MySQL/MariaDB, PHP). 
+
+Installing ownCloud from Open Build Service packages is the preferred method. These are maintained by ownCloud engineers, and you can use your package manager to keep your ownCloud server up-to-date. https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html. 
+
+https://download.owncloud.org/download/repositories/stable/owncloud/index.html
+
+
+### Prerequisites for Tarball Installation
+
+The ownCloud tar archive contains all of the required third-party PHP libraries. As a result, no extra ones are, strictly, necessary. However, ownCloud does require that PHP has a set of extensions installed, enabled, and configured.
+
+https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#prerequisites-label lists both the required and optional PHP extensions. If you need further information about a particular extension, please consult the relevant section of the extensions section of the PHP manual.
+
+
+### Install ownCloud from the Command Line
 
 ownCloud can be installed entirely from the command line. This is convenient for scripted operations and for systems administrators who prefer using the command line over a GUI. It involves five steps:
 
@@ -75,19 +94,6 @@ After completing the installation, you must immediately set the directory permis
 https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#strong-perms-label
 
 
-### Run the Installation Wizard
-
-If you prefer to install ownCloud using a GUI, follow these instructions.
-
-When the ownCloud prerequisites are fulfilled and all ownCloud files are installed, the last step to completing the installation is running the Installation Wizard. This involves just three steps:
-
-   1. Point your web browser to http://localhost/owncloud
-   2. Enter your desired administrator’s username and password.
-   3. Click “Finish Setup”.
-
-  You’re now finished and can start using your new ownCloud server.
-
-https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html
 
 
 
