@@ -4,13 +4,13 @@ layout: default
 
 # Admin: Install the server
 
-Installing ownCloud on Linux from our Open Build Service packages is the preferred method (see Linux Package Manager Installation: https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html). These are maintained by ownCloud engineers, and you can use your package manager to keep your ownCloud server up-to-date.
+Installing ownCloud on Linux from our Open Build Service packages is the preferred method (see Linux Package Manager Installation: (.https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html)). These are maintained by ownCloud engineers, and you can use your package manager to keep your ownCloud server up-to-date.
 
 ## Prerequisites¶
 
 The ownCloud tar archive contains all of the required third-party PHP libraries. As a result, no extra ones are, strictly, necessary. However, ownCloud does require that PHP has a set of extensions installed, enabled, and configured.
 
-https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#prerequisites-label lists both the required and optional PHP extensions. If you need further information about a particular extension, please consult the relevant section of the extensions section of the PHP manual.
+(.https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#prerequisites-label) lists both the required and optional PHP extensions. If you need further information about a particular extension, please consult the relevant section of the extensions section of the PHP manual.
 
 If you are using a Linux distribution, it should have packages for all the required extensions. You can check the presence of a module by typing php -m | grep -i <module_name>. If you get a result, the module is present.
 
@@ -18,15 +18,15 @@ If you are using a Linux distribution, it should have packages for all the requi
 
 ### Centos 7
 
-sudo yum install -y -q epel-release http://rpms.remirepo.net/enterprise/remi-release-7.rpm yum-utils \
-&& sudo yum-config-manager --enable remi-php72 \
-&& sudo yum update -y -q \
-&& sudo yum install -y -q \
-   httpd mariadb-server php72 php72-php php72-php-gd \
-   php72-php-mbstring php72-php-mysqlnd php72-php-cli \
-   php72-pecl-apcu redis php72-php-pecl-redis php72-php-common \
-   php72-php-ldap mariadb-server mariadb \
-&& sudo scl enable php72 bash
+      sudo yum install -y -q epel-release http://rpms.remirepo.net/enterprise/remi-release-7.rpm yum-utils \
+      && sudo yum-config-manager --enable remi-php72 \
+      && sudo yum update -y -q \
+      && sudo yum install -y -q \
+         httpd mariadb-server php72 php72-php php72-php-gd \
+         php72-php-mbstring php72-php-mysqlnd php72-php-cli \
+         php72-pecl-apcu redis php72-php-pecl-redis php72-php-common \
+         php72-php-ldap mariadb-server mariadb \
+      && sudo scl enable php72 bash
 
 See https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#ubuntu-installation-label for package information used by other Linux distributions.
 
