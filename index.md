@@ -2,6 +2,21 @@
 layout: default
 ---
 
+# Admin: Install the server
+
+# Admin: Configure the server
+
+# Admin: Configure user access
+(using the server's IP address and port 8080)
+
+# Admin: Add a user account
+
+# User: Connect to the server
+
+
+
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
