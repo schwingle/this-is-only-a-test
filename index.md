@@ -51,6 +51,7 @@ Create new users on the User management page of your ownCloud Web UI.
    3. Click __Create__.
 
 # Connect to your ownCloud
+* * *
 ## Connect with a Browser
 
 Connect to the server with a browser using the server's IP address or host server name. Specify a port if required by the administrator. Then enter your login credentials.
