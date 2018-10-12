@@ -8,7 +8,7 @@ layout: default
 
 On a Linux distribution, you can use a package manager to install the server.
 
-- Go to [ Install package owncloud-files !](http://download.owncloud.org/download/repositories/10.0/owncloud/).
+- Go to [http://download.owncloud.org/download/repositories/10.0/owncloud/!](http://download.owncloud.org/download/repositories/10.0/owncloud/).
 - Select your Linux distribution.
 - Follow the instructions to add the repository and install manually.
 
@@ -21,7 +21,7 @@ Run the Installation Wizard to complete the installation.
    1. Point your web browser to http://localhost/owncloud.
    2. Enter your desired administrator’s username and password.
    3. Set your data directory location and enter your database credentials.
-   4. Click __Finish Setup__.
+   4. Click Finish Setup.
 
 # Configure the ownCloud Server
 
