@@ -4,11 +4,11 @@ layout: default
 
 
 
-# Install the Server
+# Install the ownCloud Server
 
 On a Linux distribution, you can use a package manager to install the server.
 
-- Go to (http://download.owncloud.org/download/repositories/10.0/owncloud/).
+- Go to [ Install package owncloud-files !](http://download.owncloud.org/download/repositories/10.0/owncloud/).
 - Select your Linux distribution.
 - Follow the instructions to add the repository and install manually.
 
@@ -18,16 +18,16 @@ Next, run the Installation Wizard.
 
 Run the Installation Wizard to complete the installation.
 
-   1. Point your web browser to [this link](http://localhost/owncloud).
+   1. Point your web browser to http://localhost/owncloud.
    2. Enter your desired administrator’s username and password.
    3. Set your data directory location and enter your database credentials.
-   4. Click “Finish Setup”.
+   4. Click __Finish Setup__.
 
-# Configure the Server
+# Configure the ownCloud Server
 
 After installing your ownCloud server, click “Storage and Database” in the Installation Wizard to set your data directory and database connection.
 
-There are many additional server configuration options you can choose. See [this link](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
+There are many additional server configuration options you can choose. See [Server Configuration!](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
 
 ## Set the Data Directory
 
@@ -60,11 +60,11 @@ Create new users on the User management page of your ownCloud Web UI.
 
    1. Enter the new user’s login name and their initial password.
    2. Optionally, assign groups memberships.
-   3. Click the Create button.
+   3. Click __Create__.
 
 # Connect to the Server
 
-Connect to the server using the a browser, supplying the server's IP address and port 8080.
+Connect to the server using a browser, supplying the server's IP address and port 8080.
 
     192.168.0.1:8080
 
