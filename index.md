@@ -2,104 +2,107 @@
 layout: default
 ---
 
-# Admin: Install the ownCloud Server
+# Install the ownCloud Server on a Linux Distribution
 
 ## Install with a Package Manager
-ownCloud server runs on Linux. On a Linux distribution, you can use a package manager to install the server (https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html). The recommended package to use is owncloud-files. It only installs ownCloud, and does not install Apache, a database, or any of the required PHP dependencies. Package managers should only be used for single-server setups.
+On a Linux distribution, you can use a package manager to install the server (https://doc.owncloud.org/server/latest/admin_manual/installation/linux_installation.html). The recommended package to use is owncloud-files. It only installs ownCloud, and does not install Apache, a database, or any of the required PHP dependencies. Package managers should only be used for single-server setups.
 
-### Prerequisites for a Package Manager Installation
+1. Install your own LAMP stack, as doing so allows you to create your own custom LAMP stack without dependency conflicts with the ownCloud package. Configurations are available for the following Linux distributions:
 
-If you are using a Linux distribution, it should have packages for all the required extensions. You can check the presence of a module by typing 
+    Ubuntu 14.04 & 16.04
+    Debian 7 & 8
+    RHEL 6 & 7
+    CentOS 7.2 & 7.3
+    SLES 11SP4 & 12SP2
+    openSUSE Leap 42.2 & 42.3
+
+2. Update the package manager configuration.
+3. Set strong directory permissions.
+4. Run the Installation Wizard.
+
+### Installation Prerequisites
+
+Your Linux distribution should have packages for all the required extensions. You can check the presence of a module by typing 
 
             php -m | grep -i <module_name>
             
 If you get a result, the module is present.
 
-### Update Package Manager
+### Update the Package Manager Configuration
 
 - Go to http://download.owncloud.org/download/repositories/10.0/owncloud/
 - Select your Linux distribution
 - Follow the instructions to add the repository and install manually
 
-Once your package manager has been updated, follow the rest of the instructions on the download page to install ownCloud. Once ownCloud is installed, run the Installation Wizard (https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html) to complete your installation.
+### Set Strong Directory Permissions
 
-https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#installation-wizard-label
+Set the permissions on your ownCloud directories as strictly as possible, and for proper server operations. This should be done immediately after the initial installation and before running the setup.
+
+Your HTTP user must own the config/, data/, apps/ respectively the apps-external/ directories so that you can configure ownCloud, create, modify and delete your data files, and install apps via the ownCloud Web interface.
+
+You can find your HTTP user in your HTTP server configuration files, or you can use PHP Version and Information (Look for the User/Group line).
+
+    The HTTP user and group in Debian/Ubuntu is www-data.
+    The HTTP user and group in Fedora/CentOS is apache.
+    The HTTP user and group in Arch Linux is http.
+    The HTTP user in openSUSE is wwwrun, and the HTTP group is www.
 
 ### Run the Installation Wizard
 
-If you prefer to install ownCloud using a GUI, follow these instructions.
+When the ownCloud prerequisites are fulfilled and all ownCloud files are installed, the last step to completing the installation is running the Installation Wizard.
 
-When the ownCloud prerequisites are fulfilled and all ownCloud files are installed, the last step to completing the installation is running the Installation Wizard. This involves just three steps:
+Important! It is strongly recommended that you protect the installer through some form of password authentication, or access control. If the installer is left unprotected when exposed to the public internet, there is the possibility that a malicious actor could finish the installation and block you out — or worse. So please ensure that only you — or someone from your organization — can access the web installer.
 
-   1. Point your web browser to http://localhost/owncloud
+Run the Installation Wizard to complete the installation. 
+
+   1. Point your web browser to http://localhost/owncloud.
    2. Enter your desired administrator’s username and password.
-   3. Click “Finish Setup”.
+   3. Set your data directory location and enter your database credentials.
+   4. Click “Finish Setup”.
 
-  You’re now finished and can start using your new ownCloud server.
+  You can now start using your new ownCloud server.
 
-https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html
-
-
-
-## Install from the Source Tarball
-If there are no packages for your Linux distribution, or you prefer installing from the source tarball, you can set up ownCloud from scratch using a classic LAMP stack (Linux, Apache, MySQL/MariaDB, PHP). 
-
-Installing ownCloud from Open Build Service packages is the preferred method. These are maintained by ownCloud engineers, and you can use your package manager to keep your ownCloud server up-to-date. https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html. 
-
-https://download.owncloud.org/download/repositories/stable/owncloud/index.html
-
-
-### Prerequisites for Tarball Installation
-
-The ownCloud tar archive contains all of the required third-party PHP libraries. As a result, no extra ones are, strictly, necessary. However, ownCloud does require that PHP has a set of extensions installed, enabled, and configured.
-
-https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#prerequisites-label lists both the required and optional PHP extensions. If you need further information about a particular extension, please consult the relevant section of the extensions section of the PHP manual.
-
-
-### Install ownCloud from the Command Line
-
-ownCloud can be installed entirely from the command line. This is convenient for scripted operations and for systems administrators who prefer using the command line over a GUI. It involves five steps:
-
-   1. Ensure your server meets the ownCloud prerequisites
-   2. Download and unpack the source
-   3. Install using the occ command
-   4. Set the correct owner and permissions
-   5. Optional post-installation considerations
-
-   To install ownCloud, first download the source (whether community or enterprise) directly from ownCloud, and then unpack (decompress) the tarball into the appropriate directory.
-
-   With that done, you next need to set your webserver user to be the owner of your unpacked owncloud directory, as in the example below.
-
-    $ sudo chown -R www-data:www-data /var/www/owncloud/
-
-   With those steps completed, next use the occ command, from the root directory of the ownCloud source, to perform the installation. This removes the need to run the Graphical Installation Wizard. Here’s an example of how to do it:
-
-    # Assuming you’ve unpacked the source to /var/www/owncloud/
-    $ cd /var/www/owncloud/
-    $ sudo -u www-data php occ maintenance:install \
-       --database "mysql" --database-name "owncloud" \
-       --database-user "root" --database-pass "password" \
-       --admin-user "admin" --admin-pass "password"
-
-Important! You must run occ as your HTTP user. See Run occ As Your HTTP User (https://doc.owncloud.org/server/latest/admin_manual/configuration/server/occ_command.html#http-user-label)
-
-If you want to use a directory other than the default (which is data inside the root ownCloud directory), you can also supply the --data-dir switch. For example, if you were using the command above and you wanted the data directory to be /opt/owncloud/data, then add --data-dir /opt/owncloud/data to the command.
-
-When the command completes, apply the correct permissions to your ownCloud files and directories (see Set Strong Directory Permissions: https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#strong-perms-label). This is extremely important, as it helps protect your ownCloud installation and ensure that it will operate correctly. See Command Line Installation (https://doc.owncloud.org/server/latest/admin_manual/configuration/server/occ_command.html#command-line-installation-label) for more information.
-
-### Set Strong Directory Permissions
-
-After completing the installation, you must immediately set the directory permissions in your ownCloud installation as strictly as possible for stronger security. After you do so, your ownCloud server will be ready to use.
-
-https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#strong-perms-label
+For more information, see https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html.
 
 
 
 
 
-# Admin: Configure the server
+# Configure the Server
 
 After installing your ownCloud server, click “Storage and Database” in the Installation Wizard to expose additional installation configuration options for your ownCloud data directory and database.
+
+There are many additional server configuration options you can choose. See https://doc.owncloud.org/server/latest/admin_manual/configuration/server/ for more information.
+
+Besides configuration of the server itself, https://doc.owncloud.org/server/latest/admin_manual/configuration/ page contains information about configuring other ownCloud features:
+
+   -Database Configuration
+   -File Sharing and Management
+   -How To Install and Configure an LDAP Proxy-Cache Server
+   -Mimetypes Management
+   -User Management
+
+
+## Set the Data Directory
+
+You should locate your ownCloud data directory outside of your Web root if you are using an HTTP server other than Apache, or you may wish to store your ownCloud data in a different location for other reasons (e.g. on a storage server).
+
+Your ownCloud data directory must be exclusive to ownCloud and not be modified manually by any other process or user.
+
+It is best to configure your data directory location at installation, as it is difficult to move after installation. You may put it anywhere; in this example is it located in /var/oc_data. This directory must already exist, and must be owned by your HTTP user (see Set Strong Directory Permissions).
+
+https://doc.owncloud.org/server/latest/admin_manual/_images/install-wizard-a1.png
+
+## Configure the Database
+
+When installing ownCloud Server & ownCloud Enterprise editions the administrator may choose one of 4 supported database products. These are:
+
+    SQLite
+    MYSQL/MariaDB
+    PostgreSQL
+    Oracle 11g (Enterprise-edition only)
+
+Select your database and enter connection credentials.
 
 # Admin: Configure user access
 (using the server's IP address and port 8080)
