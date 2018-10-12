@@ -131,15 +131,17 @@ If you have checked __Send email to new user__ in the control panel on the lower
 
 https://doc.owncloud.org/server/10.0/admin_manual/configuration/user/user_configuration.html#creating-a-new-user
 
-# User: Connect to the Server
+# Connect to the Server
 
-## User: Connect with a Desktop Client
+Connect to the server using the a browser, supplying the server's IP address and port 8080.
+
+## Connect with a Desktop Client
 
 The ownCloud Desktop Client (https://doc.owncloud.org/desktop/latest/navigating.html) remains in the background and is visible as an icon in the system tray (Windows, KDE), menu bar (macOS), or notification area (Linux). A right-click on the systray icon opens a menu for quick access to your accounts.
 
 [!Systray]https://doc.owncloud.org/desktop/latest/_images/menu.png
 
-## User: Connect with a Mobile Client
+## Connect with a Mobile Client
 
 Open a Web browser and point it to your ownCloud server. Log in and look on your Personal page for a link to the ownCloud app on iTunes (iOS: https://doc.owncloud.org/ios/) or Google Play (Android: https://doc.owncloud.org/android/android_app.html). When you install the ownCloud app and open it you’ll be prompted for your ownCloud server URL and login. When it connects it opens to your Files page.
 
