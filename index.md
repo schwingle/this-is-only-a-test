@@ -9,12 +9,12 @@ On a Linux distribution, you can use a package manager to install the server (ht
 
 1. Install your own LAMP stack, as doing so allows you to create your own custom LAMP stack without dependency conflicts with the ownCloud package. Configurations are available for the following Linux distributions:
 
-    Ubuntu 14.04 & 16.04
-    Debian 7 & 8
-    RHEL 6 & 7
-    CentOS 7.2 & 7.3
-    SLES 11SP4 & 12SP2
-    openSUSE Leap 42.2 & 42.3
+    -Ubuntu 14.04 & 16.04
+    -Debian 7 & 8
+    -RHEL 6 & 7
+    -CentOS 7.2 & 7.3
+    -SLES 11SP4 & 12SP2
+    -openSUSE Leap 42.2 & 42.3
 
 2. Update the package manager configuration.
 3. Set strong directory permissions.
@@ -30,9 +30,9 @@ If you get a result, the module is present.
 
 ### Update the Package Manager Configuration
 
-- Go to http://download.owncloud.org/download/repositories/10.0/owncloud/
-- Select your Linux distribution
-- Follow the instructions to add the repository and install manually
+- Go to http://download.owncloud.org/download/repositories/10.0/owncloud/.
+- Select your Linux distribution.
+- Follow the instructions to add the repository and install manually.
 
 ### Set Strong Directory Permissions
 
@@ -42,10 +42,10 @@ Your HTTP user must own the config/, data/, apps/ respectively the apps-external
 
 You can find your HTTP user in your HTTP server configuration files, or you can use PHP Version and Information (Look for the User/Group line).
 
-    The HTTP user and group in Debian/Ubuntu is www-data.
-    The HTTP user and group in Fedora/CentOS is apache.
-    The HTTP user and group in Arch Linux is http.
-    The HTTP user in openSUSE is wwwrun, and the HTTP group is www.
+   -The HTTP user and group in Debian/Ubuntu is www-data.
+   -The HTTP user and group in Fedora/CentOS is apache.
+   -The HTTP user and group in Arch Linux is http.
+   -The HTTP user in openSUSE is wwwrun, and the HTTP group is www.
 
 ### Run the Installation Wizard
 
@@ -63,9 +63,6 @@ Run the Installation Wizard to complete the installation.
   You can now start using your new ownCloud server.
 
 For more information, see https://doc.owncloud.org/server/latest/admin_manual/installation/installation_wizard.html.
-
-
-
 
 
 # Configure the Server
@@ -97,17 +94,16 @@ https://doc.owncloud.org/server/latest/admin_manual/_images/install-wizard-a1.pn
 
 When installing ownCloud Server & ownCloud Enterprise editions the administrator may choose one of 4 supported database products. These are:
 
-    SQLite
-    MYSQL/MariaDB
-    PostgreSQL
-    Oracle 11g (Enterprise-edition only)
+   -SQLite
+   -MYSQL/MariaDB
+   -PostgreSQL
+   -Oracle 11g (Enterprise-edition only)
 
 Select your database and enter connection credentials.
 
-# Admin: Configure user access
-(using the server's IP address and port 8080)
+# Configure User Access
 
-On your Admin page, specify the host server name, for example localhost, hostname, hostname.example.com, or the IP address. To specify a port use hostname:####; to specify a Unix socket use localhost:/path/to/socket.
+On your server's Admin page, specify the host server name, for example localhost, hostname, hostname.example.com, or the IP address. To specify a port use hostname:####; to specify a Unix socket use localhost:/path/to/socket.
 
 This information is stored in 'dbhost' in the  config/config.php file.
 
@@ -117,35 +113,33 @@ ownCloud uses the config/config.php file to control server operations. Most opti
 
 (https://doc.owncloud.org/server/10.0/admin_manual/configuration/server/config_sample_php_parameters.html)
 
-# Admin: Add a user account
+# Add a User Account
 
 Create new users on the User management page of your ownCloud Web UI.
 
-## Creating a New User
+## Create a New User Account
 
-To create a user account:
-
-   -Enter the new user’s Login Name and their initial Password
-   -Optionally, assign Groups memberships
-   -Click the Create button
+   1. Enter the new user’s __Login Name__ and their initial __Password__.
+   2. Optionally, assign __Groups__ memberships
+   3. Click the __Create__ button
 
 ![CreateUser]https://doc.owncloud.org/server/latest/admin_manual/_images/users-create.png
 
 Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (\_), periods (.) and at signs (@). After creating the user, you may fill in their Full Name if it is different than the login name, or leave it for the user to complete.
 
-If you have checked Send email to new user in the control panel on the lower left sidebar, you may also enter the new user’s email address, and ownCloud will automatically send them a notification with their new login information. You may edit this email using the email template editor on your Admin page (see Email Configuration: https://doc.owncloud.org/server/10.0/admin_manual/configuration/server/email_configuration.html).
+If you have checked __Send email to new user__ in the control panel on the lower left sidebar, you may also enter the new user’s email address, and ownCloud will automatically send them a notification with their new login information. You may edit this email using the email template editor on your Admin page (see Email Configuration: https://doc.owncloud.org/server/10.0/admin_manual/configuration/server/email_configuration.html).
 
 https://doc.owncloud.org/server/10.0/admin_manual/configuration/user/user_configuration.html#creating-a-new-user
 
-# User: Connect to the server with a desktop or mobile client
+# User: Connect to the Server
 
-## User: Connect with a desktop client
+## User: Connect with a Desktop Client
 
 The ownCloud Desktop Client (https://doc.owncloud.org/desktop/latest/navigating.html) remains in the background and is visible as an icon in the system tray (Windows, KDE), menu bar (macOS), or notification area (Linux). A right-click on the systray icon opens a menu for quick access to your accounts.
 
 [!Systray]https://doc.owncloud.org/desktop/latest/_images/menu.png
 
-## User: Connect with a mobile client
+## User: Connect with a Mobile Client
 
 Open a Web browser and point it to your ownCloud server. Log in and look on your Personal page for a link to the ownCloud app on iTunes (iOS: https://doc.owncloud.org/ios/) or Google Play (Android: https://doc.owncloud.org/android/android_app.html). When you install the ownCloud app and open it you’ll be prompted for your ownCloud server URL and login. When it connects it opens to your Files page.
 
