@@ -24,7 +24,7 @@ Run the Installation Wizard to complete the installation.
         * MYSQL/MariaDB
         * PostgreSQL
         * Oracle 11g (Enterprise-edition only)
-    4. Click __Finish Setup__.
+   4. Click __Finish Setup__.
 
 # Configure the ownCloud Server
 
