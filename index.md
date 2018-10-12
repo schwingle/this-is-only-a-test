@@ -18,7 +18,7 @@ Next, run the Installation Wizard.
 
 Run the Installation Wizard to complete the installation.
 
-   1. Point your web browser to (http://localhost/owncloud).
+   1. Point your web browser to [this link](http://localhost/owncloud).
    2. Enter your desired administrator’s username and password.
    3. Set your data directory location and enter your database credentials.
    4. Click “Finish Setup”.
@@ -27,7 +27,7 @@ Run the Installation Wizard to complete the installation.
 
 After installing your ownCloud server, click “Storage and Database” in the Installation Wizard to set your data directory and database connection.
 
-There are many additional server configuration options you can choose. See (https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
+There are many additional server configuration options you can choose. See [this link](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
 
 ## Set the Data Directory
 
