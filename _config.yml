@@ -1,7 +1,7 @@
 # Site settings
 title: ownCloud Quickstart
-description: Quickstart for Installing and Configuring ownCloud
-show_downloads: false
+description: Get Up and Running with ownCloud
+show_downloads: true
 google_analytics:
 theme: jekyll-theme-hacker
 baseurl: "/owncloud-quickstart/"
