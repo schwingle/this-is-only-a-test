@@ -24,11 +24,11 @@ Run the Installation Wizard to complete the installation.
         * MYSQL/MariaDB
         * PostgreSQL
         * Oracle 11g (Enterprise-edition only)
-   4. Click __Finish Setup__.
+     4. Click __Finish Setup__.
 
 # Configure the ownCloud Server
 
-Click __Storage and Database__ in the Installation Wizard to set your data directory and database connection during setup.
+During setup in the Installation Wizard, click __Storage and Database__ to set your data directory and database connection.
 
 There are many additional server configuration options you can choose. See [Server Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
 
