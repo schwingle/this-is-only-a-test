@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-
-
-
 # Install the ownCloud Server
 
 On a Linux distribution, you can use a package manager to install the server.
@@ -21,9 +18,8 @@ Run the Installation Wizard to complete the installation.
    1. Point your web browser to http://localhost/owncloud.
    2. Enter your desired administrator’s username and password.
    3. Click __Storage and Database__ to set your data directory location and database connection.
-    * Data directory: Your ownCloud data directory must be exclusive to ownCloud and not be modified manually by any other process or user. This directory must already exist, and must be owned by your HTTP user (see [Set Strong Directory Permissions](https://doc.owncloud.org/server/latest/admin_manual/installation/source_installation.html#strong-perms-label)).
+    * Data directory: Your ownCloud data directory must already exist, be owned by your HTTP user, and be exclusive to ownCloud (not be modified manually by any other process or user).
     * Database: You may choose one of 4 supported database products. These are:
-
        * SQLite
        * MYSQL/MariaDB
        * PostgreSQL
@@ -32,7 +28,7 @@ Run the Installation Wizard to complete the installation.
 
 # Configure the ownCloud Server
 
-After installing your ownCloud server, click __Storage and Database__ in the Installation Wizard to set your data directory and database connection.
+Click __Storage and Database__ in the Installation Wizard to set your data directory and database connection during setup.
 
 There are many additional server configuration options you can choose. See [Server Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
 
@@ -46,19 +42,17 @@ This information is stored in the 'dbhost' parameter in the  config/config.php f
 
 Learn more about config.php parameters at [Core Config.php Parameters](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html)
 
-# Create a New User Account
+## Create a New User Account
 
 Create new users on the User management page of your ownCloud Web UI.
 
-   1. Enter the new user’s login name and their initial password.
+   1. Enter the new user’s login name and initial password.
    2. Optionally, assign groups memberships.
    3. Click __Create__.
 
 # Connect with a Browser
 
-Connect to the server with a browser using the server's IP address. Specify a port if required by the administrator.
-
-    xxx.xxx.xx.xx:####
+Connect to the server with a browser using the server's IP address or host server name. Specify a port if required by the administrator. Then enter your login credentials.
 
 ## Connect with a Desktop Client
 
@@ -66,4 +60,4 @@ The ownCloud Desktop Client remains in the background and is visible as an icon 
 
 ## Connect with a Mobile Client
 
-Install the ownCloud app on a mobile device and open it. Enter your ownCloud server URL and login.
+Install the ownCloud app on a mobile device and open it. Enter your ownCloud server URL and login credentials.
