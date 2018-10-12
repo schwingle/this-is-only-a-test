@@ -23,7 +23,7 @@ Run the Installation Wizard to complete the installation.
    4. Click __Finish Setup__.
 
 # Configure the ownCloud Server
-
+* * *
 During setup in the Installation Wizard, click __Storage and Database__ to set your data directory and database connection.
 
 There are many additional server configuration options you can choose. See [Server Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
