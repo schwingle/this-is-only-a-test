@@ -3,6 +3,7 @@ layout: default
 ---
 
 
+
 # Install the Server
 
 On a Linux distribution, you can use a package manager to install the server.
