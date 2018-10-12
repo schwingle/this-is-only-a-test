@@ -2,7 +2,7 @@
 layout: default
 ---
 # Install the ownCloud Server
-
+* * *
 On a Linux distribution, you can use a package manager to install the server.
 
 - Go to [http://download.owncloud.org/download/repositories/10.0/owncloud/](http://download.owncloud.org/download/repositories/10.0/owncloud/).
@@ -28,7 +28,7 @@ During setup in the Installation Wizard, click __Storage and Database__ to set y
 
 There are many additional server configuration options you can choose. See [Server Configuration](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/) for more information.
 
-# Configure User Access
+## Configure User Access
 
 On your server's Admin page, specify the host server name or the IP address. To specify a port, use hostname:####. To specify a Unix socket, use localhost:/path/to/socket.
 
@@ -38,7 +38,7 @@ This information is stored in the 'dbhost' parameter in the  config/config.php f
 
 Learn more about config.php parameters at [Core Config.php Parameters](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html).
 
-## Create a New User Account
+### Create a New User Account
 
 Create new users on the User management page of your ownCloud Web UI.
 
