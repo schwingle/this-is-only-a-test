@@ -45,9 +45,9 @@ This information is stored in the 'dbhost' parameter in the  config/config.php f
 
 Learn more about config.php parameters at [Core Config.php Parameters](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/config_sample_php_parameters.html).
 
-### Create a New User Account
+## Create a User Account
 
-Create new users on the User management page of your ownCloud Web UI.
+Create a new user on the User management page of your ownCloud Web UI.
 
    1. Enter the new user’s login name and initial password.
    2. Optionally, assign groups.
