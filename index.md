@@ -5,20 +5,24 @@ layout: default
 * * *
 On a Linux distribution, you can use a package manager to install the server.
 
+__Note__: Before installing ownCloud, install your own LAMP stack. This prevents dependency conflicts with the ownCloud package. Then update the package manager.
+
+## Update the Package Manager
+
 - Go to [http://download.owncloud.org/download/repositories/10.0/owncloud/](http://download.owncloud.org/download/repositories/10.0/owncloud/).
 - Select your Linux distribution.
 - Follow the instructions to add the repository and install manually.
 
 Next, run the Installation Wizard.
 
-## Run the Installation Wizard
+### Run the Installation Wizard
 
 Run the Installation Wizard to complete the installation.
 
   1. Point your web browser to [http://localhost/owncloud](http://localhost/owncloud).
   2. Enter your desired administrator’s username and password.
   3. Click __Storage and Database__ to set your data directory location and database connection.
-  
+
       - Data directory: Your ownCloud data directory must already exist, be owned by your HTTP user, and be exclusive to ownCloud (not be modified manually by any other process or user).
       - Database: You may choose one of 4 supported database product: SQLite, MYSQL/MariaDB, PostgreSQL, and Oracle 11g (Enterprise-edition only).
   4. Click __Finish Setup__.
