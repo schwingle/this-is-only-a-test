@@ -63,4 +63,4 @@ The ownCloud Desktop Client remains in the background and is visible as an icon 
 Install the ownCloud app on a mobile device and open it. Enter your ownCloud server URL and login credentials.
 
 * * *
-All source information is from the [ownCloud 10.0.10 Server Administration Manual] (https://doc.owncloud.org/server/latest/admin_manual/contents.html)
+All source information is from the [ownCloud 10.0.10 Server Administration Manual](https://doc.owncloud.org/server/latest/admin_manual/contents.html)
