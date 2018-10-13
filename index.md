@@ -15,7 +15,7 @@ __Note__: Before installing ownCloud, install your own LAMP stack. This prevents
 
 Next, run the Installation Wizard.
 
-### Run the Installation Wizard
+## Run the Installation Wizard
 
 Run the Installation Wizard to complete the installation.
 
