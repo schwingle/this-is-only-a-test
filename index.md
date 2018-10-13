@@ -18,8 +18,8 @@ Run the Installation Wizard to complete the installation.
   1. Point your web browser to [http://localhost/owncloud](http://localhost/owncloud).
   2. Enter your desired administrator’s username and password.
   3. Click __Storage and Database__ to set your data directory location and database connection.
-      * Data directory: Your ownCloud data directory must already exist, be owned by your HTTP user, and be exclusive to ownCloud (not be modified manually by any other process or user).
-      * Database: You may choose one of 4 supported database product: SQLite, MYSQL/MariaDB, PostgreSQL, and Oracle 11g (Enterprise-edition only).
+      - Data directory: Your ownCloud data directory must already exist, be owned by your HTTP user, and be exclusive to ownCloud (not be modified manually by any other process or user).
+      - Database: You may choose one of 4 supported database product: SQLite, MYSQL/MariaDB, PostgreSQL, and Oracle 11g (Enterprise-edition only).
   4. Click __Finish Setup__.
 
 # Configure the ownCloud Server
