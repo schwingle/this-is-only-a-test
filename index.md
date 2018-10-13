@@ -30,7 +30,9 @@ There are many additional server configuration options you can choose. See [Serv
 
 ## Configure User Access
 
-On your server's Admin page, specify the host server name or the IP address. To specify a port, use hostname:####. To specify a Unix socket, use localhost:/path/to/socket.
+On your server's Admin page, specify the host server name or the IP address.
+  - To specify a port, use hostname:####.
+  - To specify a Unix socket, use localhost:/path/to/socket.
 
 This information is stored in the 'dbhost' parameter in the  config/config.php file.
 
@@ -43,7 +45,7 @@ Learn more about config.php parameters at [Core Config.php Parameters](https://d
 Create new users on the User management page of your ownCloud Web UI.
 
    1. Enter the new user’s login name and initial password.
-   2. Optionally, assign groups memberships.
+   2. Optionally, assign groups.
    3. Click __Create__.
 
 # Connect to your ownCloud
@@ -60,6 +62,5 @@ The ownCloud Desktop Client remains in the background and is visible as an icon 
 
 Install the ownCloud app on a mobile device and open it. Enter your ownCloud server URL and login credentials.
 
-```
+* * *
 All source information is from the [ownCloud 10.0.10 Server Administration Manual] (https://doc.owncloud.org/server/latest/admin_manual/contents.html)
-```
