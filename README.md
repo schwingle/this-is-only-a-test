@@ -1,5 +1,5 @@
-## RedHat ownCloud Test
+## this-is-only-a-test
 
-It is with great pleasure that I complete this project in my quest to work for RedHat.
+Nothing to see here. Really.
 
-Thank you for the privilege!
+
